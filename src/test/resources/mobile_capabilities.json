@@ -1,0 +1,10 @@
+{
+	"deviceName": "Pixel XL API 34",
+	"udid": "emulator-5554",
+	"platformName": "Android",
+	"platformVersion": "14",
+	"appPackage": "com.wdiodemoapp",
+	"appActivity": "com.wdiodemoapp.MainActivity",
+	"app": "C:\\Users\\santiago.caicedo\\Downloads\\Android-NativeDemoApp-0.4.0.apk",
+	"automationName": "UiAutomator2"
+}

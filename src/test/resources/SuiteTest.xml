@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My suite">
+	<!-- some parameter -->
+	<parameter name="name" value="value"></parameter>
+	<!-- some parameter -->
+	<parameter name="name" value="value"></parameter>
+
+	<test name="Some Test">
+		<groups>
+			<run>
+				<include name="some group"></include>
+				<exclude name="some group"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="pathOfTheTest"></class>
+		</classes>
+	</test>
+</suite> 
