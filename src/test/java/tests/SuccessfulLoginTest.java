@@ -20,7 +20,7 @@ public class SuccessfulLoginTest extends BaseMobileTest {
     public void loginSuccessfulTest() {
         String LOGIN_OK_MSG = "You are logged in!";
 
-        loginScreen.submitLoginForm();
+        loginScreen.submitLoginForm("5afix8Xr@test.com", "NewPassword12345");
         loginScreen.getLoginFormMessage();
         Assert.assertEquals(loginScreen.getLoginFormMessage(), LOGIN_OK_MSG);
         loginScreen.clickOnOkButton();

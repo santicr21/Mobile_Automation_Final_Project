@@ -30,11 +30,11 @@ public class LoginScreen extends BaseScreen {
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
     @AndroidFindBy(accessibility = "input-email")
-    private AndroidElement signUpEmailInput;
+    private AndroidElement emailInput;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
     @AndroidFindBy(accessibility = "input-password")
-    private AndroidElement signUpPasswordInput;
+    private AndroidElement passwordInput;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
     @AndroidFindBy(accessibility = "input-repeat-password")
@@ -51,14 +51,6 @@ public class LoginScreen extends BaseScreen {
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
     @AndroidFindBy(id = "android:id/button1")
     private AndroidElement signUpFormOkButton;
-
-    @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(accessibility = "input-email")
-    private AndroidElement loginEmailInput;
-
-    @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(accessibility = "input-password")
-    private AndroidElement loginPasswordInput;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"button-LOGIN\"]/android.view.ViewGroup")
@@ -104,15 +96,15 @@ public class LoginScreen extends BaseScreen {
 
     public void submitSignUpForm () {
         click (signUpButton);
-        sendKeys (signUpEmailInput, generateRandomEmail());
-        sendKeys (signUpPasswordInput, "NewPassword12345");
+        sendKeys (emailInput, generateRandomEmail());
+        sendKeys (passwordInput, "NewPassword12345");
         sendKeys (confirmPasswordInput, "NewPassword12345");
         click (signUpFormButton);
     }
 
-    public void submitLoginForm() {
-        sendKeys (loginEmailInput, "5afix8Xr@test.com");
-        sendKeys (loginPasswordInput, "NewPassword12345");
+    public void submitLoginForm(String email, String password) {
+        sendKeys (emailInput, email);
+        sendKeys (passwordInput, password);
         click (loginButton);
     }
 
