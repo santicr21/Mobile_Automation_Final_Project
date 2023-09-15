@@ -38,8 +38,8 @@ public class SwipeCardsTest extends BaseMobileTest {
         // Comparing the the text,
         Assert.assertEquals(swipeScreen.getSecondCardText(), SECOND_CARD_TEXT_RESULT);
         Assert.assertFalse(swipeScreen.isFirstCardImageVisible());
-        Assert.assertNotEquals(firstCardDotHighlightedHeight, firstCardDotHeight);
-        Assert.assertNotEquals(firstCardDotHighlightedWidth, firstCardDotWidth);
+        Assert.assertTrue(firstCardDotHighlightedHeight > firstCardDotHeight);
+        Assert.assertTrue(firstCardDotHighlightedWidth > firstCardDotWidth);
 
         swipeScreen.swipeCardToLeft();
         int secondCardDotHeight = swipeScreen.getSecondDotHeight();
@@ -47,7 +47,7 @@ public class SwipeCardsTest extends BaseMobileTest {
 
         Assert.assertEquals(swipeScreen.getFirstCardText(), FIRST_CARD_TEXT_RESULT);
         Assert.assertFalse(swipeScreen.isSecondCardImageVisible());
-        Assert.assertNotEquals(secondCardDotHighlightedWidth, secondCardDotWidth);
-        Assert.assertNotEquals(secondCardDotHighlightedHeight, secondCardDotHeight);
+        Assert.assertTrue(secondCardDotHighlightedWidth > secondCardDotWidth);
+        Assert.assertTrue(secondCardDotHighlightedHeight > secondCardDotHeight);
     }
 }
