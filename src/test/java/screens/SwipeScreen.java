@@ -16,15 +16,15 @@ public class SwipeScreen extends BaseScreen {
      * @author Arley.Bolivar, Hans.Marquez
      */
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.widget.ScrollView[@content-desc=\"Swipe-screen\"]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "UiSelector().textContains(\"Swipe horizontal\")")
     private AndroidElement screenText;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Drag\"]/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "UiSelector().textContains(\"Drag\")")
     private AndroidElement dragScreenButton;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "(//android.view.ViewGroup[@content-desc=\"slideTextContainer\"])[2]/android.widget.TextView[1]")
+    @AndroidFindBy(uiAutomator = "UiSelector().textContains(\"GREAT COMMUNITY\")")
     private AndroidElement secondCardText;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
@@ -40,7 +40,7 @@ public class SwipeScreen extends BaseScreen {
     AndroidElement secondCardImage;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "(//android.view.ViewGroup[@content-desc=\"slideTextContainer\"])[1]/android.widget.TextView[1]")
+    @AndroidFindBy(uiAutomator = "UiSelector().textContains(\"FULLY OPEN SOURCE\")")
     AndroidElement firstCardText;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)

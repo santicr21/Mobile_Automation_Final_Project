@@ -19,15 +19,15 @@ public class MainScreen extends BaseScreen {
     /** Button */
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Webview\"]/android.widget.TextView[1]")
+    @AndroidFindBy(uiAutomator = "UiSelector().descriptionContains(\"Webview\")")
     private AndroidElement webViewButton;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Login\"]/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "UiSelector().descriptionContains(\"Login\")")
     private AndroidElement loginScreenButton;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Swipe\"]/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "UiSelector().descriptionContains(\"Swipe\")")
     private AndroidElement swipeScreenButton;
 
     public MainScreen(AndroidDriver<AndroidElement> driver) {

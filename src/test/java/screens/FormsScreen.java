@@ -15,11 +15,11 @@ public class FormsScreen extends BaseScreen {
      * @author Arley.Bolivar, Hans.Marquez
      */
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.widget.ScrollView[@content-desc=\"Forms-screen\"]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "UiSelector().textContains(\"Form components\")")
     private AndroidElement screenText;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Swipe\"]/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "UiSelector().textContains(\"Swipe\")")
     private AndroidElement swipeScreenButton;
 
     public String getFormsScreenText() {

@@ -16,7 +16,7 @@ public class DragScreen extends BaseScreen {
      * @author Arley.Bolivar, Hans.Marquez
      */
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"Drag-drop-screen\"]/android.view.ViewGroup[1]/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "UiSelector().textContains(\"Drag and Drop\")")
     private AndroidElement screenText;
 
     public String getDragScreenText() {

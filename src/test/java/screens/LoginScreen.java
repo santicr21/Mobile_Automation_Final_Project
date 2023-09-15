@@ -17,15 +17,15 @@ public class LoginScreen extends BaseScreen {
      * @author Arley.Bolivar, Hans.Marquez
      */
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.widget.ScrollView[@content-desc=\"Login-screen\"]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "UiSelector().text(\"Login / Sign up Form\")")
     private AndroidElement screenText;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Forms\"]/android.widget.TextView[2]")
+    @AndroidFindBy(uiAutomator = "UiSelector().descriptionContains(\"Forms\")")
     private AndroidElement formsScreenButton;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"button-sign-up-container\"]/android.view.ViewGroup")
+    @AndroidFindBy(uiAutomator = "UiSelector().descriptionContains(\"button-sign-up-container\")")
     private AndroidElement signUpButton;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
@@ -41,7 +41,7 @@ public class LoginScreen extends BaseScreen {
     private AndroidElement confirmPasswordInput;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"button-SIGN UP\"]/android.view.ViewGroup/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "UiSelector().descriptionContains(\"button-SIGN UP\")")
     private AndroidElement signUpFormButton;
 
     @HowToUseLocators(androidAutomation = LocatorGroupStrategy.ALL_POSSIBLE)
